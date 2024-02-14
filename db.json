@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "3553",
+      "fullName": "Tomán Attila",
+      "email": "toman@maki.com",
+      "password": "12345"
+    },
+    {
+      "id": "f7d5",
+      "fullName": "Tomán Attila",
+      "email": "tesztelek@gmail.com",
+      "password": "1111"
+    },
+    {
+      "id": "63d8",
+      "fullName": "Tomán Alexandra",
+      "email": "ferencz.szandra@gmail.com",
+      "password": "0000"
+    },
+    {
+      "id": "44b4",
+      "fullName": "Tomán Attila",
+      "email": "toman@maki.com",
+      "password": "111"
+    },
+    {
+      "id": "c9e0",
+      "fullName": "Teszt Elek",
+      "email": "tesztelek@gmail.com",
+      "password": "111"
+    }
+  ]
+}

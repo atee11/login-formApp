@@ -1,0 +1,41 @@
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+    <p-card [header]="'Login' | translate" [style]="{width: '360px'}">
+        <div class="field">
+            <label for="email">Email</label>
+            <input 
+                type="text" 
+                pInputText 
+                formControlName="email" 
+                class="w-full" 
+                name="email" 
+                [placeholder]="'Type your email' | translate"
+            />
+            <small *ngIf="email.invalid && (email.dirty || email.touched)" class="block p-error">
+                <div *ngIf="email.errors?.['required']"> {{ "Email is required." | translate }} </div>
+                <div *ngIf="email.errors?.['email']"> {{ "Email should be valid." | translate }} </div>
+            </small>
+        </div>
+        <div class="field">
+            <label for="password"> {{ "Password" | translate }} </label>
+            <input 
+                type="password" 
+                pInputText 
+                formControlName="password" 
+                class="w-full" 
+                name="password" 
+                [placeholder]="'Type your password' | translate" 
+            />
+            <small *ngIf="password.invalid && (password.dirty || password.touched)" class="block p-error">
+                <div *ngIf="password.errors?.['required']"> {{ "Password is required." | translate }} </div>
+            </small>
+        </div>
+        <p-button [label]="'SIGN IN' | translate" styleClass="w-full" [disabled]="loginForm.invalid" type="submit"></p-button>
+        <div class="mt-2">
+            {{ "Not a member?" | translate }} <a routerLink="/register"> {{ "Register" | translate }} </a>
+        </div>
+    </p-card>
+    <select [value]="lang" (change)="ChangeLang($event)">
+        <option value="en">English</option>
+        <option value="hu">Magyar</option>
+    </select>
+</form>
